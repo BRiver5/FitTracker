@@ -6,6 +6,7 @@ venv/
 backend/.env
 
 # Node / Expo
+.tools/
 node_modules/
 .expo/
 dist/
