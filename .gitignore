@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+backend/.env
+
+# Node / Expo
+node_modules/
+.expo/
+dist/
+*.tsbuildinfo
+.expo-shared/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
