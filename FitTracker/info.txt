@@ -1,0 +1,32 @@
+App name: FitTracker: Workout & Progress
+package name: com.fittracker.mobile.app
+privacy policy: create it yourself using free privacy policy generator
+data safety: NOTHING
+category: HEALTH_AND_FITNESS
+tags: fitness, workout, gym, training, weight, calories, progress
+rating: 3+
+
+Short description: Plan workouts, track sets, weight, calories, and progress in one app.
+Long description:
+
+FitTracker is a clean, focused workout companion built for people who want to train consistently and see real progress.
+
+Plan your workouts
+Create custom workout plans with exercises, sets, reps, and rest timers. Schedule training days and start a live session with one tap.
+
+Train with confidence
+Follow guided workout sessions with rest countdowns, set logging, and haptic feedback so you stay in the zone from warm-up to finish.
+
+Track what matters
+Log body weight with a smooth drum-style picker, monitor daily calories and macros, and review your training history in a simple activity log.
+
+See your progress
+Watch streaks, charts, personal records, and analytics across week, month, and year views — all in a premium dark interface designed for clarity.
+
+FitTracker keeps everything in one place: workouts, sessions, weight, calories, and progress — without clutter.
+
+ALL COUNTRIES
+
+release notes:
+
+Initial release — workout plans, live sessions, weight and calorie tracking, progress analytics.

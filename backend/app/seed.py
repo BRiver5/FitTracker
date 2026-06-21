@@ -1,8 +1,18 @@
 """Seed the exercise library with 50+ default exercises. Idempotent."""
 
 from app.core.database import SessionLocal
+from app.core.deps import get_or_create_default_user
 from app.models import Exercise
 from app.repositories.exercise_repo import ExerciseRepository
+
+
+def seed_default_user() -> None:
+    """Ensure the single local user exists (no auth in this build)."""
+    db = SessionLocal()
+    try:
+        get_or_create_default_user(db)
+    finally:
+        db.close()
 
 EXERCISES: list[dict] = [
     # Push
@@ -101,4 +111,5 @@ if __name__ == "__main__":
     from app.core.database import Base, engine
 
     Base.metadata.create_all(bind=engine)
+    seed_default_user()
     seed_exercises()

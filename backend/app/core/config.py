@@ -9,12 +9,8 @@ class Settings(BaseSettings):
     APP_NAME: str = "FitTracker API"
     DEBUG: bool = False
 
-    DATABASE_URL: str = "postgresql://fittracker:fittracker@localhost:5432/fittracker"
-
-    SECRET_KEY: str = "change-me-in-production"
-    ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
-    REFRESH_TOKEN_EXPIRE_DAYS: int = 30
+    # Local-first: a single SQLite file next to the backend. No external DB/Docker needed.
+    DATABASE_URL: str = "sqlite:///./fittracker.db"
 
     # Comma-separated list of allowed origins. Expo dev tools use various ports.
     CORS_ORIGINS: str = "http://localhost:8081,http://localhost:19006,exp://localhost:8081,https://fittracker.app"

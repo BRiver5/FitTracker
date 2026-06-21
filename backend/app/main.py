@@ -11,7 +11,6 @@ from app.core.database import Base, engine
 from app.core.responses import ApiError, envelope
 from app.routers import (
     analytics,
-    auth,
     calorie_logs,
     exercises,
     sessions,
@@ -19,7 +18,7 @@ from app.routers import (
     weight_logs,
     workout_plans,
 )
-from app.seed import seed_exercises
+from app.seed import seed_default_user, seed_exercises
 
 logger = logging.getLogger("fittracker")
 
@@ -36,6 +35,7 @@ STATUS_MESSAGES = {
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine)
+    seed_default_user()
     seed_exercises()
     yield
 
@@ -83,7 +83,6 @@ def health():
     return envelope({"status": "ok"})
 
 
-app.include_router(auth.router)
 app.include_router(users.router)
 app.include_router(workout_plans.router)
 app.include_router(exercises.router)
